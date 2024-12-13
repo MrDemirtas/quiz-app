@@ -25,16 +25,16 @@
       </label>
     </div>
     <div class="container">
-      <div class="main-page" style="display: none">
+      <div class="main-page">
         <div class="main-page-header">
           <h1>Welcome to the <strong>Frontend Quiz!</strong></h1>
           <span>Pick a subject to get started.</span>
         </div>
         <div class="quiz-type">
-          <button class="htmlBtn"><img src="./assets/img/html.svg" />HTML</button>
-          <button class="cssBtn"><img src="./assets/img/css.svg" />CSS</button>
-          <button class="jsBtn"><img src="./assets/img/js.svg" />JavaScript</button>
-          <button class="accBtn"><img src="./assets/img/accessibility.svg" />Erişilebilirlik</button>
+          <button class="quizTypeButton" data-id="HTML"><img src="./assets/img/html.svg" />HTML</button>
+          <button class="quizTypeButton" data-id="CSS"><img src="./assets/img/css.svg" />CSS</button>
+          <button class="quizTypeButton" data-id="JavaScript"><img src="./assets/img/js.svg" />JavaScript</button>
+          <button class="quizTypeButton" data-id="Erişilebilirlik"><img src="./assets/img/accessibility.svg" />Erişilebilirlik</button>
         </div>
       </div>
 
@@ -69,7 +69,7 @@
         </div>
       </div>
 
-      <div class="result-page">
+      <div class="result-page" style="display: none">
         <div class="result-page-header">
           <h1>Quiz completed<strong>You scored...</strong></h1>
         </div>
