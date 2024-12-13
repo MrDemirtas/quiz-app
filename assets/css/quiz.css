@@ -72,6 +72,10 @@ html {
   background-size: cover;
 }
 
+button{
+  cursor: pointer;
+}
+
 body {
   /* height: 100vh; */
   padding: 24px;
@@ -126,6 +130,9 @@ body {
       font-weight: 500;
       line-height: 18px;
     }
+    * {
+      display: none;
+    }
   }
 
   label {
@@ -174,7 +181,6 @@ body {
     background-color: #fff;
     box-shadow: 0px 16px 40px 0px #8fa0c124;
     border: none;
-    cursor: pointer;
     display: flex;
     align-items: center;
     gap: 16px;
@@ -219,8 +225,8 @@ body {
     width: 40%;
     height: 100%;
     border-radius: 104px;
-
-    background-color: #a729f5;
+    transition: .5s ease-in-out;
+    background: linear-gradient(90deg, #a729f5, #f5c129);
   }
 }
 
@@ -247,8 +253,8 @@ body {
       }
 
       div {
-        width: 40px;
-        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
         border-radius: 6px;
         background-color: #f4f6fa;
         font-size: 18px;
@@ -269,7 +275,8 @@ body {
       }
     }
 
-    .submitAnswer {
+    .submitAnswer,
+    .submitNextBtn {
       background-color: #a729f5;
       color: #fff;
       border: none;
@@ -278,6 +285,10 @@ body {
       font-size: 18px;
       font-weight: 500;
       line-height: 18px;
+    }
+
+    .submitNextBtn {
+      display: none;
     }
   }
 }
@@ -344,9 +355,49 @@ body {
       line-height: 18px;
       color: #fff;
       border-radius: 12px;
-      cursor: pointer;
     }
   }
+}
+
+.quizSectionFormOptions {
+  display: grid;
+  gap: 12px;
+}
+
+.correct-answer {
+  border-color: #26d782 !important;
+  div {
+    background-color: #26d782 !important;
+    color: #fff !important;
+  }
+
+  &::after {
+    content: url("../img/correct.svg");
+    margin-left: auto;
+  }
+}
+
+.incorrect-answer {
+  border-color: #ee5454 !important;
+  div {
+    background-color: #ee5454 !important;
+    color: #fff !important;
+  }
+
+  &::after {
+    content: url("../img/incorrect.svg");
+    margin-left: auto;
+  }
+}
+
+.statusMsg {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  margin-inline: auto;
+  color: #ee5454;
+  font-size: 18px;
+  line-height: 18px;
 }
 
 html.dark-mode {
@@ -393,5 +444,9 @@ html.dark-mode {
         color: #abc1e1;
       }
     }
+  }
+
+  .statusMsg {
+    color: #ee5454;
   }
 }

@@ -2,7 +2,7 @@
   "quizzes": [
     {
       "title": "HTML",
-      "icon": "/images/icon-html.svg",
+      "icon": "/assets/img/html.svg",
       "questions": [
         {
           "question": "HTML ne anlama gelir?",
@@ -103,22 +103,12 @@
             "Bir formdaki alanları gizler."
           ],
           "answer": "Bir formda ilişkili verileri gruplaştırmak için kullanılır."
-        },
-        {
-          "question": "HTML'de `fieldset` etiketi ne işe yarar?",
-          "options": [
-            "Bir formda ilişkili verileri gruplaştırmak için kullanılır.",
-            "Alanı sabit bir boyuta ayarlamak için kullanılır.",
-            "Bir formdaki alanları otomatik olarak doğrular.",
-            "Bir formdaki alanları gizler."
-          ],
-          "answer": "Bir formda ilişkili verileri gruplaştırmak için kullanılır."
         }
       ]
     },
     {
       "title": "CSS",
-      "icon": "/images/icon-css.svg",
+      "icon": "/assets/img/css.svg",
       "questions": [
         {
           "question": "CSS ne anlama gelir?",
@@ -219,22 +209,12 @@
             "Bir yakınlaştırma efekti oluşturmak için"
           ],
           "answer": "Bir öğenin yığın sırasını belirtmek için"
-        },
-        {
-          "question": "CSS'teki z-index özelliğinin amacı nedir?",
-          "options": [
-            "Öğelerin sayısını saymak için",
-            "Bir öğenin büyütme seviyesini ayarlamak için",
-            "Bir öğenin yığın sırasını belirtmek için",
-            "Bir yakınlaştırma efekti oluşturmak için"
-          ],
-          "answer": "Bir öğenin yığın sırasını belirtmek için"
         }
       ]
     },
     {
       "title": "JavaScript",
-      "icon": "/images/icon-js.svg",
+      "icon": "/assets/img/js.svg",
       "questions": [
         {
           "question": "'Hello World' mesajını bir uyarı kutusunda göstermek için doğru sözdizimi nedir?",
@@ -335,22 +315,12 @@
             "let person = (firstName = 'John', lastName = 'Doe');"
           ],
           "answer": "let person = {firstName: 'John', lastName: 'Doe'};"
-        },
-        {
-          "question": "Doğru bir JavaScript nesnesini nasıl yazarsınız?",
-          "options": [
-            "let person = {firstName: 'John', lastName: 'Doe'};",
-            "let person = {firstName = 'John', lastName = 'Doe'};",
-            "let person = (firstName: 'John', lastName: 'Doe');",
-            "let person = (firstName = 'John', lastName = 'Doe');"
-          ],
-          "answer": "let person = {firstName: 'John', lastName: 'Doe'};"
         }
       ]
     },
     {
       "title": "Erişilebilirlik",
-      "icon": "/images/icon-accessibility.svg",
+      "icon": "/assets/img/accessibility.svg",
       "questions": [
         {
           "question": "'WCAG' ne anlama gelir?",
@@ -441,16 +411,6 @@
             "Kırık bağlantıları atlamak için"
           ],
           "answer": "Ana navigasyondan ana içeriğe geçişi atlamak için"
-        },
-        {
-          "question": "Aşağıdaki araçlardan hangisi bir web sitesinin erişilebilirliğini kontrol etmeye yardımcı olabilir?",
-          "options": [
-            "W3C Validator",
-            "Google Lighthouse",
-            "CSS Validator",
-            "JavaScript Console"
-          ],
-          "answer": "Google Lighthouse"
         },
         {
           "question": "Aşağıdaki araçlardan hangisi bir web sitesinin erişilebilirliğini kontrol etmeye yardımcı olabilir?",

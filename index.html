@@ -13,8 +13,8 @@
   <body>
     <div class="header">
       <div class="header-title">
-        <img src="./assets/img/accessibility.svg" alt="" />
-        <h2>Erişilebilirlik</h2>
+        <img />
+        <h2></h2>
       </div>
       <label>
         <img src="./assets/img/sun.svg" class="light-mode" />
@@ -48,36 +48,40 @@
         </div>
         <div class="quiz-section">
           <form action="#" class="quizSectionForm">
-            <label>
-              <div class="answerA">A</div>
-              <input type="radio" name="answer" value="" />4.5 : 1
-            </label>
-            <label>
-              <div class="answerB">B</div>
-              <input type="radio" name="answer" value="" />4.5 : 1
-            </label>
-            <label>
-              <div class="answerC">C</div>
-              <input type="radio" name="answer" value="" />4.5 : 1
-            </label>
-            <label>
-              <div class="answerD">D</div>
-              <input type="radio" name="answer" value="" />4.5 : 1
-            </label>
+            <div class="quizSectionFormOptions">
+              <label>
+                <div>A</div>
+                <input type="radio" name="answer" value="Cevap 1" />Cevap 1
+              </label>
+              <label>
+                <div>B</div>
+                <input type="radio" name="answer" value="Cevap 2" />Cevap 2
+              </label>
+              <label>
+                <div>C</div>
+                <input type="radio" name="answer" value="Cevap 3" />Cevap 3
+              </label>
+              <label>
+                <div>D</div>
+                <input type="radio" name="answer" value="Cevap 4" />Cevap 4
+              </label>
+            </div>
             <button class="submitAnswer">Cevabı Gönder</button>
+            <button class="submitNextBtn">Sıradaki Soru</button>
+            <span class="statusMsg"><img src="./assets/img/incorrect.svg" >Lütfen cevap seçin!</span>
           </form>
         </div>
       </div>
 
       <div class="result-page" style="display: none">
         <div class="result-page-header">
-          <h1>Quiz completed<strong>You scored...</strong></h1>
+          <h1>Sınav tamamlandı<strong>İşte skorun...</strong></h1>
         </div>
         <div class="result-page-footer">
           <div class="result-user-score">
             <h4><img src="./assets/img/accessibility.svg" />Erişilebilirlik</h4>
             <h1>8</h1>
-            <span>out of 10</span>
+            <span>10 soruda</span>
           </div>
           <button class="playAgainBtn">Tekrar Oyna</button>
         </div>
