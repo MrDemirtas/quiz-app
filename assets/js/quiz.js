@@ -88,10 +88,13 @@ function getQuestions({ quizzes = [], index = 0 }) {
     document.querySelector(".result-user-score h4").innerHTML = `<img src="${quizzes.icon}" />${quizzes.title}`; // * result-page quiz tipi bilgilerini yazdır.
     document.querySelector(".result-user-score h1").innerText = scores.correct; // * Skoru ekrana yazdır
     document.querySelector(".result-user-score span").innerText = `${questions.length} soruda`; // * Soru miktarını ekrana yazdır.
-    
+
     // * Testi baştan başlatır.
     document.querySelector(".playAgainBtn").onclick = (e) => {
       e.preventDefault();
+      document.querySelector(".header-title img").src = ""; // * header'da quiz resmini sil
+      document.querySelector(".header-title h2").innerHTML = ""; // * header'da quiz başlığını sil
+      
       document.querySelector(".result-page").style = "display: none"; // * result-page'ı gizle
       document.querySelector(".main-page").style = "display: grid"; // * main-page'ı göster
     };
