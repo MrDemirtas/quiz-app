@@ -111,6 +111,13 @@ function getQuestions({ quizzes = [], index = 0 }) {
         // * Eğer cevap yanlış ise
         scores.incorrect++;
         document.querySelector('input[name="answer"]:checked').parentElement.classList.add("incorrect-answer");
+
+        // * Doğru cevabı gösterme
+        document.querySelectorAll('input[name="answer"]').forEach(element => {
+          if (element.value === questions[index].answer) {
+            element.parentElement.classList.add("show-correct-answer");
+          }
+        })
       }
 
       // * Cevap verildikten sonra seçim yapmayı devre dışı bırak

@@ -70,9 +70,10 @@ h6 {
 html {
   background: url("../img/elipse-mobile.svg") top left no-repeat, #f4f6fa;
   background-size: cover;
+  height: 100%;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
@@ -89,8 +90,8 @@ body {
 .switch {
   appearance: none;
   background-color: #cfd8ef;
-  height: 22px;
-  width: 35px;
+  height: 20px;
+  width: 32px;
   display: inline-flex;
   margin: 0;
   border-radius: 15px;
@@ -102,8 +103,8 @@ body {
 .switch:after {
   content: "";
   background-color: white;
-  width: 14px;
-  height: 14px;
+  width: 50%;
+  height: 100%;
   border-radius: 50%;
   transition: transform 0.4s cubic-bezier(0.85, 0, 0.15, 1);
 }
@@ -159,6 +160,7 @@ body {
   display: grid;
   gap: 16px;
   h1 {
+    display: grid;
     font-size: 40px;
     font-weight: 300;
     line-height: 40px;
@@ -225,7 +227,7 @@ body {
     width: 40%;
     height: 100%;
     border-radius: 104px;
-    transition: .5s ease-in-out;
+    transition: 0.5s ease-in-out;
     background: linear-gradient(90deg, #a729f5, #f5c129);
   }
 }
@@ -275,8 +277,7 @@ body {
       }
     }
 
-    .submitAnswer,
-    .submitNextBtn {
+    button {
       background-color: #a729f5;
       color: #fff;
       border: none;
@@ -305,7 +306,6 @@ body {
       display: grid;
       strong {
         font-weight: 500;
-        line-height: 40px;
       }
     }
   }
@@ -316,6 +316,7 @@ body {
 
     .result-user-score {
       background-color: #fff;
+      box-shadow: 0px 16px 40px 0px #8FA0C124;
       padding: 32px;
       display: grid;
       gap: 16px;
@@ -362,6 +363,18 @@ body {
 .quizSectionFormOptions {
   display: grid;
   gap: 12px;
+
+  label{
+    cursor: pointer;
+    box-shadow: 0px 16px 40px 0px #8FA0C124;
+  }
+}
+
+.show-correct-answer {
+  &::after {
+    content: url("../img/correct.svg");
+    margin-left: auto;
+  }
 }
 
 .correct-answer {
@@ -402,6 +415,7 @@ body {
 
 html.dark-mode {
   background: url("../img/dark-mode/elipse-mobile.svg") top left no-repeat, #313e51;
+  background-size: cover;
   body {
     color: #fff;
   }
@@ -419,8 +433,15 @@ html.dark-mode {
     }
   }
 
+  .quizSectionFormOptions {
+    label{
+      box-shadow: 0px 16px 40px 0px #313E5124;
+    }
+  }
+
   .quiz-type {
     button {
+      box-shadow: 0px 16px 40px 0px #313E5124;
       background-color: #3b4d66;
       color: #fff;
     }
@@ -431,15 +452,19 @@ html.dark-mode {
   }
 
   .quizSectionForm {
-    label {
-      background-color: #313e51;
-      border-color: #313e51;
+    .quizSectionFormOptions{
+      label {
+        background-color: #3B4D66;
+        border-color: #3B4D66;
+      }
     }
   }
 
   .result-page-footer {
     .result-user-score {
       background-color: #3b4d66;
+      box-shadow: 0px 16px 40px 0px #313E5124;
+
       span {
         color: #abc1e1;
       }
@@ -448,5 +473,211 @@ html.dark-mode {
 
   .statusMsg {
     color: #ee5454;
+  }
+}
+
+@media (width >= 768px) {
+  html {
+    background: url("../img/elipse-tablet.svg") top left no-repeat, #f4f6fa;
+  }
+
+  html.dark-mode {
+    background: url("../img/dark-mode/elipse-tablet.svg") top left no-repeat, #313e51;
+  }
+
+  body {
+    padding: 64px;
+  }
+
+  .container {
+    margin-top: 48px;
+  }
+
+  .header {
+    label {
+      img {
+        width: 24px;
+      }
+      input {
+        width: 48px;
+        height: 28px;
+      }
+    }
+
+    .header-title {
+      img {
+        width: 56px;
+      }
+
+      h2 {
+        font-size: 28px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  .main-page-header {
+    h1 {
+      font-size: 64px;
+      line-height: 64px;
+    }
+
+    span {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  .quiz-type {
+    gap: 24px;
+
+    button {
+      font-size: 28px;
+      line-height: 28px;
+
+      img {
+        width: 56px;
+      }
+    }
+  }
+
+  .quiz-page-header {
+    gap: 28px;
+    span {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    p {
+      font-size: 36px;
+      line-height: 43.2px;
+    }
+  }
+
+  .quiz-section {
+    .quizSectionForm {
+      gap: 32px;
+
+      button {
+        border-radius: 24px;
+        padding: 32px;
+        font-size: 28px;
+        line-height: 28px;
+      }
+
+      .quizSectionFormOptions {
+        gap: 24px;
+
+        label {
+          font-size: 28px;
+          line-height: 28px;
+
+          div {
+            min-width: 56px;
+            min-height: 56px;
+            font-size: 28px;
+            line-height: 28px;
+          }
+        }
+      }
+    }
+  }
+
+  .result-page {
+    gap: 64px;
+    .result-page-header {
+      h1 {
+        font-size: 64px;
+        line-height: 64px;
+        gap: 8px;
+      }
+    }
+
+    .result-page-footer {
+      gap: 32px;
+      button {
+        padding: 32px;
+        font-size: 28px;
+        line-height: 28px;
+        border-radius: 24px;
+      }
+      .result-user-score {
+        padding: 48px;
+        gap: 40px;
+        border-radius: 24px;
+        h4 {
+          font-size: 28px;
+          line-height: 28px;
+          img {
+            width: 56px;
+          }
+        }
+
+        h1 {
+          font-size: 144px;
+          line-height: 144px;
+        }
+
+        span {
+          margin-top: -24px;
+          font-size: 24px;
+          line-height: 36px;
+        }
+      }
+    }
+  }
+
+  .statusMsg {
+    font-size: 24px;
+    line-height: 36px;
+    img {
+      width: 40px;
+    }
+  }
+}
+
+@media (width >= 1200px) {
+  html {
+    background: url("../img/elipse-tablet.svg") top left no-repeat, url("../img/elipse-desktop.svg") bottom right no-repeat, #f4f6fa;
+  }
+
+  html.dark-mode {
+    background: url("../img/dark-mode/elipse-tablet.svg") top left no-repeat, url("../img/dark-mode/elipse-desktop.svg") bottom right no-repeat, #313e51;
+  }
+
+  body {
+    padding-inline: 140px;
+    padding-block: 80px;
+  }
+
+  .container {
+    margin-top: 100px;
+  }
+
+  .quiz-type {
+    button {
+      padding: 20px;
+    }
+  }
+
+  .main-page-header {
+    gap: 48px;
+    grid-template-rows: max-content;
+  }
+
+  .quiz-page {
+    .quiz-page-header {
+      grid-template-rows: max-content;
+      .progressBar {
+        align-self: center;
+      }
+    }
+  }
+
+  .result-page,
+  .quiz-page,
+  .main-page {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 130px;
   }
 }
